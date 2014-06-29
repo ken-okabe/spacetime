@@ -10,6 +10,7 @@ var log = function(msg)
 };
 
 
+
 Object.defineProperty(Object.prototype, 'Omap',
 {
   value: function(f, ctx)
@@ -25,26 +26,29 @@ Object.defineProperty(Object.prototype, 'Omap',
   }
 });
 
+var type = function(obj)
+{
+  return Object
+    .prototype
+    .toString
+    .call(obj)
+    .slice(8, -1);
+};
+
 //----------
+var g = global;
+g.F = {};
+var F = g.F;
+
+g.type = type;
+
 var fs = require('fs');
 
 var spacetime = function()
 {
   log('spacetime initialization');
 
-  var objTemplate = {
-
-    compute: function()
-    {
-
-
-      log('--compute--');
-      log(this.src());
-
-
-      return this;
-    }
-  };
+  var objTemplate = {};
 
   var functionsDir = fs.readdirSync('./functions');
 
@@ -63,6 +67,8 @@ var spacetime = function()
       objTemplate[moduleName] =
         require('./functions/' + dirName + '/' + moduleName);
 
+      F[moduleName] = objTemplate[moduleName];
+
       log(moduleName + ' loaded');
     });
 
@@ -72,15 +78,29 @@ var spacetime = function()
     var obj = objTemplate;
     obj.src = function() //first src as a closure for lazyEval
     {
-      return src;
+      var seq = src;
+      log(seq);
+      var cursor = 0;
+
+      var it = {
+        next: function()
+        {
+          cursor++;
+          return seq[cursor - 1];
+        },
+        hasNext: function()
+        {
+          return cursor < seq.length;
+        }
+      };
+
+      return it;
+
     };
     return obj;
   };
 
   return f;
-
-
-
 
 };
 

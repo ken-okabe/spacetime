@@ -17,22 +17,50 @@ var _ = require('./spacetime.js')();
 
 log('test start');
 
-var _a = _([0, 1, 2]);
+
 
 var increment = function(x)
 {
-  return x * 2;
+  return x + 1;
 };
 
-_a
-  .map(increment)
-  .map(increment)
-  .compute();
 
+var natural = function(n)
+{
+  return n;
+};
+var _natural = _().generator(natural);
+
+
+
+var _a = _([100, 101, 102])
+
+
+.map(increment)
+
+.map(increment)
+
+.take(2)
+
+.compute();
+
+
+
+
+/*
+var n5 = _natural
+  .map(increment)
+  .take(10)
+
+.map(increment)
+  .take(5)
+  .compute();
+*/
 /*
 var _b = _('hello');
 
 _b
   .map()
   .compute();
+*
 */
