@@ -44,7 +44,7 @@ var fs = require('fs');
 
 var spacetime = function()
 {
-  log('spacetime initialization');
+  log('=== spacetime initialization ===');
 
   var objTemplate = {};
 
@@ -73,7 +73,9 @@ var spacetime = function()
   //=======================
   var f = function(src)
   {
-    var obj = objTemplate;
+    var obj = require('clone')(objTemplate);
+    log('f called');
+
     obj.src = function() //first src as a closure for lazyEval
     {
       var seq = src;
@@ -95,6 +97,7 @@ var spacetime = function()
       return it;
 
     };
+    log('return newly created obj');
     return obj;
   };
 
