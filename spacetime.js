@@ -9,8 +9,6 @@ var log = function(msg)
   console.log('core:', msg);
 };
 
-
-
 Object.defineProperty(Object.prototype, 'Omap',
 {
   value: function(f, ctx)
