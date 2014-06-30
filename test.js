@@ -61,4 +61,12 @@ var fibF = function()
 
 var Fib = _().generator(fibF); //フィボナッチ数列（無限数列）（計算しない）
 
-Fib.take(10).compute();
+var fib10 =
+  Fib
+  .take(10)
+  .compute(function(x)
+  {
+    console.log(x);
+  });
+
+//console.log(fib10);
