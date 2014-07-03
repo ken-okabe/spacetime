@@ -1,10 +1,11 @@
 {
   "name": "spacetime",
-  "version": "0.0.1",
-  "description": "lazy & FRP integration",
-  "main": "app.js",
+  "version": "0.0.2",
+  "description": "spacetime =========",
+  "main": "spacetime.js",
   "dependencies": {
-    "baconjs": "^0.7.15"
+    "spacetime-lazy": "^0.0.4",
+    "spacetime-timeline": "^0.0.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,11 +15,6 @@
     "type": "git",
     "url": "https://github.com/kenokabe/spacetime"
   },
-  "keywords": [
-    "lazy",
-    "FRP",
-    "reactive"
-  ],
   "author": "Ken Okabe",
   "license": "MIT",
   "bugs": {
