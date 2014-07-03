@@ -1,11 +1,11 @@
 {
   "name": "spacetime",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "spacetime =========",
   "main": "spacetime.js",
   "dependencies": {
-    "spacetime-lazy": "^0.0.4",
-    "spacetime-timeline": "^0.0.1"
+    "spacetime-lazy": "*",
+    "spacetime-timeline": "*"
   },
   "devDependencies": {},
   "scripts": {
