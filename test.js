@@ -8,7 +8,6 @@ var log = function(msg)
   console.log('TEST:', msg);
 };
 
-
 //----------
 
 var _ = require('./spacetime').lazy();
@@ -17,9 +16,10 @@ var __ = require('./spacetime').timeline();
 log('test start');
 
 var _e = _([2, 7, 1, 8, 2, 8]);
+
 _e.take(5).compute(function(x)
 {
-  log(x)
+  log(x);
 });
 //wrap a recursive function to memoize
 // must be at the definition in the same scope
