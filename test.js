@@ -16,8 +16,8 @@ var __ = require('./spacetime').timeline();
 
 log('test start');
 
-var _pi = _([3, 1, 4, 1, 5, 9, 2]);
-_pi.take(5).compute(function(x)
+var _e = _([2, 7, 1, 8, 2, 8]);
+_e.take(5).compute(function(x)
 {
   log(x)
 });
@@ -111,18 +111,15 @@ var natural = _(function(n)
 var _natural = _(natural);
 var _pi = _([3, 1, 4, 1, 5, 9, 2]);
 
-var it = _natural.it();
-//var it = _pi.it();
+//var it = _natural.it();
+var it = _pi.it();
 
-
-var __b = __().interval(1000)
+var __b = __().interval(3000)
   .map(function()
   {
-    //return _natural.it().next();
-
     return it.next();
   })
-  .take(10);
+  .take(2);
 
 __b
   .compute(function(x)
