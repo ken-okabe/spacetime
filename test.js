@@ -74,12 +74,30 @@ _d
 
 //===========================
 
+var natural = _(function(n)
+{
+  return n;
+});
+
+
+//--------------------------
+
+var _pi = _([3, 1, 4, 1, 5, 9, 2]);
+//-----------------------------------
+
+//var it = _pi.it();
+
 
 var customTL = function(tl)
 {
+  var _natural = _(natural);
+  var it = _natural.it();
+
   var interval = setInterval(function()
   {
+    tl.val = it.next();
     tl.next();
+
   }, 100);
 
   tl.stop = function()
@@ -87,6 +105,40 @@ var customTL = function(tl)
     clearInterval(interval);
   };
 };
+
+
+var __x = __(customTL);
+
+__x
+  .compute(function(x)
+  {
+    log(x);
+  });
+
+
+
+
+
+
+
+
+
+/*
+
+var __b = __().interval(1000)
+  .map(function()
+  {
+    return it.next();
+  });
+// .take(2);
+
+__b
+  .compute(function(x)
+  {
+    log(x);
+  });
+
+
 
 var __a =
   __(customTL)
@@ -101,28 +153,4 @@ __a
   {
     log(x);
   });
-
-
-
-var natural = _(function(n)
-{
-  return n;
-});
-var _natural = _(natural);
-var _pi = _([3, 1, 4, 1, 5, 9, 2]);
-
-var it = _natural.it();
-//var it = _pi.it();
-
-var __b = __().interval(1000)
-  .map(function()
-  {
-    return it.next();
-  });
-// .take(2);
-
-__b
-  .compute(function(x)
-  {
-    log(x);
-  });
+  */
