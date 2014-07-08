@@ -97,7 +97,6 @@ var customTL = function(tl)
   {
     tl.val = it.next();
     tl.next();
-
   }, 100);
 
   tl.stop = function()
@@ -107,9 +106,9 @@ var customTL = function(tl)
 };
 
 
-var __x = __(customTL);
+var __customTL = __(customTL);
 
-__x
+__customTL
   .compute(function(x)
   {
     log(x);
