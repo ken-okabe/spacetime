@@ -13,19 +13,19 @@ var loadModulesFactoryBrowserify = function(objTemplate)
 {
   log('loading');
   objTemplate['compute'] =
-    require('./node_modules/spacetime-lazy-compute/compute');
+    require('./spacetime-lazy-compute/compute');
   log('compute loaded');
   objTemplate['generator'] =
-    require('./node_modules/spacetime-lazy-generator/generator');
+    require('./spacetime-lazy-generator/generator');
   log('generator loaded');
   objTemplate['map'] =
-    require('./node_modules/spacetime-lazy-map/map');
+    require('./spacetime-lazy-map/map');
   log('map loaded');
   objTemplate['reduce'] =
-    require('./node_modules/spacetime-lazy-reduce/reduce');
+    require('./spacetime-lazy-reduce/reduce');
   log('reduce loaded');
   objTemplate['take'] =
-    require('./node_modules/spacetime-lazy-take/take');
+    require('./spacetime-lazy-take/take');
   log('take loaded');
 
   log('loaded');
