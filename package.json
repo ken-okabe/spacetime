@@ -1,13 +1,14 @@
 {
   "name": "spacetime",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "spacetime =========",
   "main": "spacetime.js",
-  "dependencies": {
-    "spacetime-lazy": "*",
-    "spacetime-timeline": "*"
+  "devDependencies": {
+     "clone": "*",
+     "memoizee": "*",
+     "moment":"*",
+     "watchjs":"*"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
