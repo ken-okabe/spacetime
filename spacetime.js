@@ -1,6 +1,6 @@
 var spacetime = {
-  lazy: require('spacetime-lazy'),
-  timeline: require('spacetime-timeline')
+  lazy: require('./spacetime-lazy'),
+  timeline: require('./spacetime-timeline')
 };
 
 

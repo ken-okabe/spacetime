@@ -37,7 +37,8 @@ var spacetime_timeline = function()
   if (typeof window === 'undefined')
   {
     log('loading node-mode');
-    var functionsDir = require('fs').readdirSync(__dirname + '/node_modules');
+    var functionsDir = require('fs')
+      .readdirSync(__dirname);
 
     functionsDir
       .map(function(dirName)
@@ -52,7 +53,7 @@ var spacetime_timeline = function()
             .split('.js')[0];
           //  log(moduleName);
           objTemplate[moduleName] =
-            require(__dirname + '/node_modules/' + dirName + '/' + moduleName);
+            require(__dirname + '/' + dirName + '/' + moduleName);
 
 
           log(moduleName + ' loaded');
