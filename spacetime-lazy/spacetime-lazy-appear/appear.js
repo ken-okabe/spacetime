@@ -6,12 +6,12 @@
 
 var log = function(msg)
 {
-  console.log('map:', msg);
+  console.log('appear:', msg);
 };
 
-//----------
 
-var map = function(f)
+
+var appear = function(a, b)
 {
   var preObj = this;
   var pre_it = preObj.it;
@@ -19,26 +19,46 @@ var map = function(f)
   var newObj = preObj;
   newObj.it = function()
   {
-    log('--map--');
+    log('--appear--');
 
     var preIt = pre_it();
+
+    if (preIt.type === 'array')
+    {
+      log('Array');
+      preIt.seq[preIt.seq.length] = a;
+    }
+    else if (preIt.type === 'object')
+    {
+      log('Object');
+      log('pre---seq!!!!!!!!!!!!');
+      log(preIt.seq);
+      preIt.seq[a] = b;
+      log(preIt.seq);
+    }
+    else
+    {
+      log('arguments not correct');
+    }
 
     var newIt = {
       type: preIt.type,
       seq: preIt.seq,
       next: function()
       {
-        return f(preIt.next());
+        return preIt.next();
       },
       hasNext: function()
       {
+        log('hasNext-------');
         return preIt.hasNext();
       }
     };
+    log(newIt);
     return newIt;
   };
 
   return newObj;
 };
 
-module.exports = map;
+module.exports = appear;

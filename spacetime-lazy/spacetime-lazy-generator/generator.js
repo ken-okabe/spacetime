@@ -17,8 +17,6 @@ var generator = function(f)
   var cursor = 0;
   var seq = [];
 
-
-
   var preObj = this;
   // var pre_it = preObj.it;
 
@@ -28,6 +26,9 @@ var generator = function(f)
     //log('generatorF called');
 
     var it = {
+
+      type: 'array',
+      seq: seq,
       next: function()
       {
         cursor++;

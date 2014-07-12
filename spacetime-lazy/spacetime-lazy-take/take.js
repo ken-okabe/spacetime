@@ -33,6 +33,8 @@ var take = function(n)
 
     var cursor = 0;
     var newIt = {
+      type: preIt.type,
+      seq: seq,
       next: function()
       {
         cursor++;

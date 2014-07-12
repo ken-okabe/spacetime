@@ -37,6 +37,8 @@ var reduce = function(f)
 
     var cursor = 0;
     var newIt = {
+      type: preIt.type,
+      seq: preIt.seq,
       next: function()
       {
         cursor++;

@@ -80,6 +80,8 @@ var spacetime_lazy = function()
     log(seq);
     log('------');*/
 
+    newObj.seq = seq;
+
     if (!seq) //emply call,_()
     {
       newObj.type = 'null';
@@ -89,19 +91,19 @@ var spacetime_lazy = function()
       return newObj;
     }
 
-    else if (type(seq) === 'Array')
+    else if (type(newObj.seq) === 'Array')
     {
-      newObj.type = 'array';
-      log('seq type');
       log(newObj.type);
       newObj.it = function() //first src as a closure for lazyEval
       {
         log('the first it called');
 
-        log(seq);
+        log(newObj.seq);
         var cursor = 0;
 
         var it = {
+          type: 'array',
+          seq: newObj.seq,
           next: function()
           {
             cursor++;
@@ -117,16 +119,64 @@ var spacetime_lazy = function()
 
       };
 
-      log('return newly created Array obj');
+      log('return newly created Array type obj');
+      return newObj;
+    }
+    else if (type(newObj.seq) === 'Object')
+    {
+      /*
+      newObj.type = 'object';
+      log('seq type');
+      log(newObj.type);
+      */
+      newObj.it = function() //first src as a closure for lazyEval
+      {
+        log('the objectttttttttttttttttfirst it called');
+
+        log(newObj.seq);
+        var cursor = 0;
+
+        //var keys = Object.keys(newObj.seq);
+
+        var it = {
+          type: 'object',
+          seq: newObj.seq,
+          next: function()
+          {
+            log('next-----------------');
+            cursor++;
+
+            var key = Object.keys(newObj.seq)[cursor - 1];
+
+            // var obj = {};
+            // obj[key] = newObj.seq[key];
+            return key;
+          },
+          hasNext: function()
+          {
+            log('hasNext-------');
+
+            log(newObj.seq);
+            //  log(keys);
+            log(Object.keys(newObj.seq));
+            return cursor < Object.keys(newObj.seq).length;
+          }
+        };
+
+        return it;
+
+      };
+
+      log('return newly created Object type obj');
       return newObj;
     }
 
-    else if (type(seq) === 'Function')
+    else if (type(newObj.seq) === 'Function')
     {
-      if (seq.class === 'memo')
+      if (newObj.seq.class === 'memo')
       {
         log('memoized Function, so will return generator');
-        return newObj.generator(seq); //exteranl function generator
+        return newObj.generator(newObj.seq); //exteranl function generator
       }
       else
       {
