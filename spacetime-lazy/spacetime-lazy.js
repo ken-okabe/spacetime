@@ -131,13 +131,10 @@ var spacetime_lazy = function()
       */
       newObj.it = function() //first src as a closure for lazyEval
       {
-        log('the objectttttttttttttttttfirst it called');
+        log('the object first it called');
 
         log(newObj.seq);
         var cursor = 0;
-
-        //var keys = Object.keys(newObj.seq);
-
         var it = {
           type: 'object',
           seq: newObj.seq,
@@ -147,9 +144,6 @@ var spacetime_lazy = function()
             cursor++;
 
             var key = Object.keys(newObj.seq)[cursor - 1];
-
-            // var obj = {};
-            // obj[key] = newObj.seq[key];
             return key;
           },
           hasNext: function()
