@@ -17,46 +17,28 @@ var appear = function(a, b)
   var pre_it = preObj.it;
 
   var newObj = preObj;
-  newObj.it = function()
+  var preIt = pre_it();
+
+  if (preIt.type === 'array')
   {
-    log('--appear--');
+    //  log('Array');
+    preIt.seq[preIt.seq.length] = a;
+  }
+  else if (preIt.type === 'object')
+  {
+    //log('Object');
+    //  log('pre---seq!!!!!!!!!!!!');
+    //  log(preIt.seq);
+    preIt.seq[a] = b;
+    log(preIt.seq);
+  }
+  else
+  {
+    log('arguments not correct');
+  }
 
-    var preIt = pre_it();
 
-    if (preIt.type === 'array')
-    {
-      log('Array');
-      preIt.seq[preIt.seq.length] = a;
-    }
-    else if (preIt.type === 'object')
-    {
-      log('Object');
-      log('pre---seq!!!!!!!!!!!!');
-      log(preIt.seq);
-      preIt.seq[a] = b;
-      log(preIt.seq);
-    }
-    else
-    {
-      log('arguments not correct');
-    }
 
-    var newIt = {
-      type: preIt.type,
-      seq: preIt.seq,
-      next: function()
-      {
-        return preIt.next();
-      },
-      hasNext: function()
-      {
-        log('hasNext-------');
-        return preIt.hasNext();
-      }
-    };
-    log(newIt);
-    return newIt;
-  };
 
   return newObj;
 };

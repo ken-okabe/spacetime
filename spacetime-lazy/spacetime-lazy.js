@@ -131,16 +131,16 @@ var spacetime_lazy = function()
       */
       newObj.it = function() //first src as a closure for lazyEval
       {
-        log('the object first it called');
+        //      log('the object first it called');
 
-        log(newObj.seq);
+        //    log(newObj.seq);
         var cursor = 0;
         var it = {
           type: 'object',
           seq: newObj.seq,
           next: function()
           {
-            log('next-----------------');
+            //    log('next-----------------');
             cursor++;
 
             var key = Object.keys(newObj.seq)[cursor - 1];
@@ -148,11 +148,11 @@ var spacetime_lazy = function()
           },
           hasNext: function()
           {
-            log('hasNext-------');
+            //log('hasNext-------');
 
-            log(newObj.seq);
+            //    log(newObj.seq);
             //  log(keys);
-            log(Object.keys(newObj.seq));
+            //  log(Object.keys(newObj.seq));
             return cursor < Object.keys(newObj.seq).length;
           }
         };

@@ -43,6 +43,7 @@ var compute = function(f)
       log('next while==========');
       preIt.next();
     }
+
   }
   else if (preIt.type === 'atom')
   {
