@@ -29,9 +29,9 @@ var appear = function(a, b)
     //log('Object');
     //  log('pre---seq!!!!!!!!!!!!');
     //  log(preIt.seq);
-    
+
     preIt.seq[a] = b;
-    log(preIt.seq);
+  //  log(preIt.seq);
   }
   else
   {
