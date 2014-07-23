@@ -40,8 +40,9 @@ var compute = function(f)
 
     while (preIt.hasNext())
     {
-      log('next while==========');
-      preIt.next();
+      //    log('next while==========');
+      var key = preIt.next();
+      seq[key] = preIt.seq[key];
     }
 
   }
