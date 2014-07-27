@@ -13,37 +13,17 @@ var log = function(msg)
 
 var map = function(f)
 {
+  log('--spacetime-map-');
   var W = this.W;
 
   var preObj = this;
-  var pre_tl = preObj.tl;
-
   var newObj = require('clone')(preObj);
 
-  newObj.tl = function()
+  W.watch(preObj, 'beacon', function()
   {
-
-    log('--map--');
-    var preTl = pre_tl();
-
-    var newTl = {
-      beacon: false,
-      next: function()
-      {
-        return (this.beacon = !this.beacon);
-      },
-      stop: preTl.stop
-    };
-
-    W.watch(preTl, 'beacon', function()
-    {
-      newTl.val = f(preTl.val);
-
-      newTl.next();
-    });
-
-    return newTl;
-  };
+    newObj.val = f(preObj.val);
+    newObj.beacon = preObj.beacon;
+  });
 
   return newObj;
 };

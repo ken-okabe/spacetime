@@ -6,23 +6,24 @@
 
 var log = function(msg)
 {
-  console.log('compute:', msg);
+  console.log('appear:', msg);
 };
 
-var compute = function(f)
+//----------
+
+var appear = function(val)
 {
-  log('--compute--');
+  //  log('--spacetime-appear--');
   var W = this.W;
 
   var preObj = this;
+  preObj.val = val;
+  preObj.next();
 
-  W.watch(preObj, 'beacon', function()
-  {
-    f(preObj.val);
-  });
+  var newObj = preObj;
 
-  return true; //seq;
-
+  return newObj;
 };
 
-module.exports = compute;
+
+module.exports = appear;

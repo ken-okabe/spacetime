@@ -14,7 +14,7 @@ var _ = require('./spacetime').lazy();
 var __ = require('./spacetime').timeline();
 
 log('test start');
-
+/*
 var _e = _([2, 7, 1, 8, 2, 8]);
 
 _e.take(5).compute(function(x)
@@ -74,10 +74,7 @@ _d
 
 //===========================
 
-var natural = _(function(n)
-{
-  return n;
-});
+
 
 
 //--------------------------
@@ -86,27 +83,24 @@ var _pi = _([3, 1, 4, 1, 5, 9, 2]);
 //-----------------------------------
 
 //var it = _pi.it();
+*/
 
 
-var customTL = function(tl)
+var __customTL = __();
+
+var natural = _(function(n)
 {
-  var _natural = _(natural);
-  var it = _natural.it();
+  return n;
+});
 
-  var interval = setInterval(function()
-  {
-    tl.val = it.next();
-    tl.next();
-  }, 100);
+var _natural = _(natural);
+var it = _natural.it();
 
-  tl.stop = function()
-  {
-    clearInterval(interval);
-  };
-};
+var interval = setInterval(function()
+{
+  __customTL.appear(it.next());
 
-
-var __customTL = __(customTL);
+}, 1000);
 
 __customTL
   .compute(function(x)
@@ -115,11 +109,16 @@ __customTL
   });
 
 
+var __customTL2 = __customTL.map(function(x)
+{
+  return x * 2;
+});
 
-
-
-
-
+__customTL2
+  .compute(function(x)
+  {
+    log(x);
+  });
 
 
 /*

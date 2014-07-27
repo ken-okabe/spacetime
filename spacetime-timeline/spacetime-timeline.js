@@ -80,35 +80,21 @@ var spacetime_timeline = function()
     /*  log('--seq--');
     log(seq);
     log('------');*/
+    newObj.beacon = false;
+    newObj.val = null;
 
-    if (!seq) //emply call,_()
+    newObj.next = function()
+    {
+      return (newObj.beacon = !newObj.beacon);
+    };
+
+    if (!seq) //emply call,__()
     {
       newObj.type = 'null';
 
       log('seq type is ...');
       log(newObj.type);
-      //
-      //
-
-      newObj.tl = function()
-      {
-
-        log('--null Sq--');
-        //   var preTl = pre_tl();
-
-        var newTl = {
-          beacon: false,
-          next: function()
-          {
-            return (this.beacon = !this.beacon);
-          },
-          stop: function() {}
-        };
-
-
-        return newTl;
-      };
-
+      // 　　
       return newObj;
     }
 

@@ -12,12 +12,18 @@ var log = function(msg)
 var loadModulesFactoryBrowserify = function(objTemplate)
 {
   log('loading');
+  objTemplate['appear'] =
+    require('./spacetime-lazy-appear/appear');
+  log('appear loaded');
   objTemplate['compute'] =
     require('./spacetime-lazy-compute/compute');
   log('compute loaded');
   objTemplate['generator'] =
     require('./spacetime-lazy-generator/generator');
   log('generator loaded');
+  objTemplate['get'] =
+    require('./spacetime-lazy-get/get');
+  log('get loaded');
   objTemplate['map'] =
     require('./spacetime-lazy-map/map');
   log('map loaded');

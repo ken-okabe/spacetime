@@ -88,6 +88,9 @@ var spacetime_lazy = function()
 
       log('seq type');
       log(newObj.type);
+
+
+
       return newObj;
     }
 

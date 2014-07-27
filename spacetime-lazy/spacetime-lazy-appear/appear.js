@@ -26,12 +26,9 @@ var appear = function(a, b)
   }
   else if (preIt.type === 'object')
   {
-    //log('Object');
-    //  log('pre---seq!!!!!!!!!!!!');
-    //  log(preIt.seq);
 
     preIt.seq[a] = b;
-  //  log(preIt.seq);
+    //  log(preIt.seq);
   }
   else
   {
