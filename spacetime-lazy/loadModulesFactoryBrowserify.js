@@ -21,9 +21,9 @@ var loadModulesFactoryBrowserify = function(objTemplate)
   objTemplate['generator'] =
     require('./spacetime-lazy-generator/generator');
   log('generator loaded');
-  objTemplate['get'] =
-    require('./spacetime-lazy-get/get');
-  log('get loaded');
+  objTemplate['computeOn'] =
+    require('./spacetime-lazy-computeOn/computeOn');
+  log('computeOn loaded');
   objTemplate['map'] =
     require('./spacetime-lazy-map/map');
   log('map loaded');

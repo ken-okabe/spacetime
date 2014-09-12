@@ -14,7 +14,7 @@ var _ = require('./spacetime').lazy();
 var __ = require('./spacetime').timeline();
 
 log('test start');
-/*
+
 var _e = _([2, 7, 1, 8, 2, 8]);
 
 _e.take(5).compute(function(x)
@@ -83,7 +83,17 @@ var _pi = _([3, 1, 4, 1, 5, 9, 2]);
 //-----------------------------------
 
 //var it = _pi.it();
-*/
+
+
+var _x = _(
+{});
+
+_x.appear(100, 'test3333333333333');
+_x.appear(101, 'tes4444443333333');
+var x = _x.computeOn(101);
+
+log(x);
+
 
 
 var __customTL = __();
