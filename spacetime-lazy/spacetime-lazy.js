@@ -115,6 +115,10 @@ var spacetime_lazy = function()
           hasNext: function()
           {
             return cursor < seq.length;
+          },
+          reset: function()
+          {
+            cursor = 0;
           }
         };
 
@@ -157,6 +161,10 @@ var spacetime_lazy = function()
             //  log(keys);
             //  log(Object.keys(newObj.seq));
             return cursor < Object.keys(newObj.seq).length;
+          },
+          reset: function()
+          {
+            cursor = 0;
           }
         };
 

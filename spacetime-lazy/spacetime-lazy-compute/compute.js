@@ -32,6 +32,7 @@ var compute = function(f)
     {
       seq[seq.length] = preIt.next();
     }
+    preIt.reset();
   }
   else if (preIt.type === 'object')
   {
@@ -44,6 +45,7 @@ var compute = function(f)
       var key = preIt.next();
       seq[key] = preIt.seq[key];
     }
+    preIt.reset();
 
   }
   else if (preIt.type === 'atom')

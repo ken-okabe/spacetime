@@ -33,6 +33,10 @@ var map = function(f)
       hasNext: function()
       {
         return preIt.hasNext();
+      },
+      reset: function()
+      {
+        return preIt.reset();
       }
     };
     return newIt;

@@ -43,6 +43,10 @@ var take = function(n)
       hasNext: function()
       {
         return cursor < seq.length;
+      },
+      reset: function()
+      {
+        return preIt.reset();
       }
     };
 

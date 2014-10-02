@@ -40,6 +40,10 @@ var generator = function(f)
       hasNext: function()
       {
         return cursor < seq.length;
+      },
+      reset: function()
+      {
+        cursor = 0;
       }
     };
     /*,
