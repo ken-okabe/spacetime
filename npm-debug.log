@@ -1,0 +1,155 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/ken/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+12 verbose folder .
+13 info prepublish spacetime@0.0.8
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/ken/.npm/1f1177db-tar.lock
+16 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+17 verbose lock tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz /Users/ken/.npm/f4d6ccbe-0703-0-08929087920114398-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+21 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+22 verbose tar unpack /var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+23 silly lockFile 4655e67e--ken-npm-spacetime-0-0-8-package tar:///Users/ken/.npm/spacetime/0.0.8/package
+24 verbose lock tar:///Users/ken/.npm/spacetime/0.0.8/package /Users/ken/.npm/4655e67e--ken-npm-spacetime-0-0-8-package.lock
+25 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+26 verbose lock tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz /Users/ken/.npm/f4d6ccbe-0703-0-08929087920114398-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry spacetime.js
+33 silly gunzTarPerm extractEntry test.js
+34 silly gunzTarPerm extractEntry spacetime-lazy/package.json
+35 silly gunzTarPerm extractEntry spacetime-lazy/README.md
+36 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy.js
+37 silly gunzTarPerm extractEntry spacetime-lazy/loadModulesFactoryBrowserify.js
+38 silly gunzTarPerm extractEntry spacetime-lazy/test.js
+39 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-computeOn/package.json
+40 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-computeOn/README.md
+41 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-computeOn/computeOn.js
+42 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-compute/package.json
+43 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-compute/README.md
+44 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-compute/compute.js
+45 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-map/package.json
+46 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-map/README.md
+47 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-map/map.js
+48 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-reduce/package.json
+49 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-reduce/README.md
+50 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-reduce/reduce.js
+51 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-take/package.json
+52 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-take/README.md
+53 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-take/take.js
+54 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-appear/package.json
+55 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-appear/README.md
+56 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-appear/appear.js
+57 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-generator/package.json
+58 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-generator/README.md
+59 silly gunzTarPerm extractEntry spacetime-lazy/spacetime-lazy-generator/generator.js
+60 silly gunzTarPerm extractEntry spacetime-timeline/package.json
+61 silly gunzTarPerm extractEntry spacetime-timeline/README.md
+62 silly gunzTarPerm extractEntry spacetime-timeline/loadModulesFactoryBrowserify.js
+63 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline.js
+64 silly gunzTarPerm extractEntry spacetime-timeline/test.js
+65 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-appear/README.md
+66 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-appear/appear.js
+67 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-compute/package.json
+68 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-compute/README.md
+69 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-compute/compute.js
+70 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-interval/package.json
+71 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-interval/README.md
+72 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-interval/interval.js
+73 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-map/package.json
+74 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-map/README.md
+75 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-map/map.js
+76 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-take/package.json
+77 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-take/README.md
+78 silly gunzTarPerm extractEntry spacetime-timeline/spacetime-timeline-take/take.js
+79 silly lockFile 4655e67e--ken-npm-spacetime-0-0-8-package tar:///Users/ken/.npm/spacetime/0.0.8/package
+80 silly lockFile 4655e67e--ken-npm-spacetime-0-0-8-package tar:///Users/ken/.npm/spacetime/0.0.8/package
+81 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+82 silly lockFile f4d6ccbe-0703-0-08929087920114398-tmp-tgz tar:///var/folders/vx/pzsc12rd5r7grfzyn35m2_500000gn/T/npm-7087-_3_Dag0B/1412291240703-0.08929087920114398/tmp.tgz
+83 silly lockFile 3a52ce78- .
+84 silly lockFile 3a52ce78- .
+85 silly publish { name: 'spacetime',
+85 silly publish   version: '0.0.8',
+85 silly publish   description: 'spacetime =========',
+85 silly publish   main: 'spacetime.js',
+85 silly publish   dependencies: { clone: '*', memoizee: '*', moment: '*', watchjs: '*' },
+85 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+85 silly publish   repository: { type: 'git', url: 'https://github.com/kenokabe/spacetime' },
+85 silly publish   author: { name: 'Ken Okabe' },
+85 silly publish   license: 'MIT',
+85 silly publish   bugs: { url: 'https://github.com/kenokabe/spacetime/issues' },
+85 silly publish   homepage: 'https://github.com/kenokabe/spacetime',
+85 silly publish   readme: 'spacetime\n=========\n',
+85 silly publish   readmeFilename: 'README.md',
+85 silly publish   _id: 'spacetime@0.0.8',
+85 silly publish   _shasum: 'e3f1833b8966c2e8c7f4ded63605f62665c1c20b',
+85 silly publish   _from: '.' }
+86 verbose url raw spacetime
+87 verbose url resolving [ 'https://registry.npmjs.org/', './spacetime' ]
+88 verbose url resolved https://registry.npmjs.org/spacetime
+89 info trying registry request attempt 1 at 08:07:20
+90 http PUT https://registry.npmjs.org/spacetime
+91 http 403 https://registry.npmjs.org/spacetime
+92 verbose headers { date: 'Thu, 02 Oct 2014 23:07:21 GMT',
+92 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+92 verbose headers   'content-type': 'application/json',
+92 verbose headers   'cache-control': 'max-age=60',
+92 verbose headers   'content-length': '2072',
+92 verbose headers   'accept-ranges': 'bytes',
+92 verbose headers   via: '1.1 varnish',
+92 verbose headers   'x-served-by': 'cache-ty67-TYO',
+92 verbose headers   'x-cache': 'MISS',
+92 verbose headers   'x-cache-hits': '0',
+92 verbose headers   'x-timer': 'S1412291241.084406,VS0,VE477',
+92 verbose headers   'keep-alive': 'timeout=10, max=50',
+92 verbose headers   connection: 'Keep-Alive' }
+93 error publish Failed PUT 403
+94 error Error: forbidden cannot modify pre-existing version: 0.0.8
+94 error old={"name":"spacetime","version":"0.0.8","description":"spacetime =========","main":"spacetime.js","dependencies":{"clone":"*","memoizee":"*","moment":"*","watchjs":"*"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/kenokabe/spacetime"},"author":{"name":"Ken Okabe"},"license":"MIT","bugs":{"url":"https://github.com/kenokabe/spacetime/issues"},"homepage":"https://github.com/kenokabe/spacetime","_id":"spacetime@0.0.8","_shasum":"2788844cd834eb7da298630ccb4252d9014930b4","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"kenokabe","email":"kenokabe@gmail.com"},"maintainers":[{"name":"kenokabe","email":"kenokabe@gmail.com"}],"dist":{"shasum":"2788844cd834eb7da298630ccb4252d9014930b4","tarball":"http://registry.npmjs.org/spacetime/-/spacetime-0.0.8.tgz"}}
+94 error new={"name":"spacetime","version":"0.0.8","description":"spacetime =========","main":"spacetime.js","dependencies":{"clone":"*","memoizee":"*","moment":"*","watchjs":"*"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/kenokabe/spacetime"},"author":{"name":"Ken Okabe"},"license":"MIT","bugs":{"url":"https://github.com/kenokabe/spacetime/issues"},"homepage":"https://github.com/kenokabe/spacetime","readme":"spacetime\u000a=========\u000a","readmeFilename":"README.md","_id":"spacetime@0.0.8","_shasum":"e3f1833b8966c2e8c7f4ded63605f62665c1c20b","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"kenokabe","email":"kenokabe@gmail.com"},"maintainers":[{"name":"kenokabe","email":"kenokabe@gmail.com"}],"dist":{"shasum":"e3f1833b8966c2e8c7f4ded63605f62665c1c20b","tarball":"http://registry.npmjs.org/spacetime/-/spacetime-0.0.8.tgz"}}: spacetime
+94 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+94 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+94 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+94 error     at Request.EventEmitter.emit (events.js:98:17)
+94 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+94 error     at Request.EventEmitter.emit (events.js:117:20)
+94 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+94 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+94 error     at _stream_readable.js:919:16
+94 error     at process._tickCallback (node.js:419:13)
+95 error If you need help, you may report this *entire* log,
+95 error including the npm and node versions, at:
+95 error     <http://github.com/npm/npm/issues>
+96 error System Darwin 14.0.0
+97 error command "node" "/usr/local/bin/npm" "publish"
+98 error cwd /Volumes/GD15/gd1/spacetime
+99 error node -v v0.10.28
+100 error npm -v 1.4.9
+101 verbose exit [ 1, true ]
