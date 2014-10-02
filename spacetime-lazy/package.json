@@ -1,9 +1,10 @@
 {
   "name": "spacetime-lazy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "spacetime-lazy ==============",
   "main": "spacetime-lazy.js",
-  "scripts": {
+  "scripts":
+  {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ken Okabe",

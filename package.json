@@ -1,24 +1,28 @@
 {
   "name": "spacetime",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "spacetime =========",
   "main": "spacetime.js",
-  "dependencies": {
-     "clone": "*",
-     "memoizee": "*",
-     "moment":"*",
-     "watchjs":"*"
+  "dependencies":
+  {
+    "clone": "*",
+    "memoizee": "*",
+    "moment": "*",
+    "watchjs": "*"
   },
-  "scripts": {
+  "scripts":
+  {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
+  "repository":
+  {
     "type": "git",
     "url": "https://github.com/kenokabe/spacetime"
   },
   "author": "Ken Okabe",
   "license": "MIT",
-  "bugs": {
+  "bugs":
+  {
     "url": "https://github.com/kenokabe/spacetime/issues"
   },
   "homepage": "https://github.com/kenokabe/spacetime"
