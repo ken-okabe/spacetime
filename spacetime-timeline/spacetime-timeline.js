@@ -97,14 +97,28 @@ var spacetime_timeline = function()
       log('seq type is ...');
       log(newObj.type);
 
-
+      newObj.timelineCapacity = null;
       // 　　
       return newObj;
     }
-    else if (seq === 'NOW') //call __('currentTime')
+    else if (type(seq) === 'Object')
+    {　
+      newObj.type = 'Object';
+
+      log('seq type is ...');
+      log(newObj.type);
+
+      newObj.timelineCapacity = seq;
+      // 　　
+      return newObj;
+
+    }
+
+    else if (seq === 'NOW') //call __('NOW')
     {　
       return moment().utc();
     }
+
     else if (type(seq) === 'Array')
     {
 

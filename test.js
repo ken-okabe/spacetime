@@ -106,8 +106,11 @@ var odd = _(natural)
 
 //==================================
 
+var moment = require('moment');
 
-var __a = __();
+var timelineCapacity = moment.duration(40, 'seconds');
+
+var __a = __(timelineCapacity);
 
 
 var _natural = _(natural);
@@ -124,8 +127,9 @@ __a.compute(function(x)
 {
   log('x ' + x);
   log(__a.value(__('NOW')));
-});
 
+  log(__a.value(__('NOW').subtract(2, 'seconds')));
+});
 
 
 /*
