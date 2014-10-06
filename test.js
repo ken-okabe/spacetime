@@ -123,9 +123,9 @@ var interval = setInterval(function()
 
 }, 1000);
 
-__a.compute(function(x)
+__a.compute(function()
 {
-  log('x ' + x);
+  // log('x ' + x);
   log(__a.value(__('NOW')));
 
   log(__a.value(__('NOW').subtract(2, 'seconds')));
