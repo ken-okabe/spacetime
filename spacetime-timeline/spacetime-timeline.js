@@ -22,7 +22,9 @@ var type = function(obj)
 //----------
 var clone = require('clone');
 
-var W = require("watchjs");
+var W = require('watchjs');
+
+var moment = require('moment');
 
 var spacetime_timeline = function()
 {
@@ -94,10 +96,15 @@ var spacetime_timeline = function()
 
       log('seq type is ...');
       log(newObj.type);
+
+
       // 　　
       return newObj;
     }
-
+    else if (seq === 'NOW') //call __('currentTime')
+    {　
+      return moment().utc();
+    }
     else if (type(seq) === 'Array')
     {
 

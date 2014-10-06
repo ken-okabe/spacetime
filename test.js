@@ -9,10 +9,126 @@ var log = function(msg)
 };
 
 //----------
+var clog = function(msg)
+{
+  console.log('TEST:', msg);
+};
 
-var _ = require('./spacetime').lazy();
-var __ = require('./spacetime').timeline();
 
+//----------
+var spacetime = require('./spacetime');
+
+var _ = spacetime.lazy();
+var __ = spacetime.timeline();
+
+log('test start');
+
+var _e = _([2, 7, 1, 8, 2, 8]);
+
+_e.take(5).compute(function(x)
+{
+  clog(x);
+});
+//wrap a recursive function to memoize
+// must be at the definition in the same scope
+var fib = _(function(n)
+{
+  if (n <= 1)
+    return 1; // as the Fib definition in Math
+  else
+    return fib(n - 2) + fib(n - 1); // as the Fib definition in Math
+});
+
+
+var fib10 = _(fib)
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+var natural = _(function(n)
+{
+  return n;
+});
+
+
+
+var natural10 = _(natural)
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+log('---------------------------');
+var naturalreduce = _(natural)
+  .take(10)
+  .reduce(function(a, b)
+  {
+    return a + b;
+  })
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+log('============================');
+var naturalreduce2 = _(natural)
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+
+var even = _(natural)
+  .map(function(x)
+  {
+    return x * 2;
+  })
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+var odd = _(natural)
+  .map(function(x)
+  {
+    return x * 2 + 1;
+  })
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+//==================================
+
+
+var __a = __();
+
+
+var _natural = _(natural);
+var it = _natural.it();
+
+
+var interval = setInterval(function()
+{
+  __a.appear(it.next());
+
+}, 1000);
+
+__a.compute(function(x)
+{
+  log('x ' + x);
+  log(__a.value(__('NOW')));
+});
+
+
+
+/*
 log('test start');
 
 var _e = _([2, 7, 1, 8, 2, 8]);
