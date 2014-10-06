@@ -35,7 +35,7 @@ var value = function(utc)
   var iYY = YY;
   while (iYY >= 0)
   {
-    if (!Obj[iYY])
+    if (Obj[iYY] === undefined)
     {
       log('YY NOT found');
       iYY--;
@@ -49,23 +49,21 @@ var value = function(utc)
       var iMM = MM;
       while (iMM >= 1)
       {
-        if (!Obj[iYY][iMM])
+        if (Obj[iYY][iMM] === undefined)
         {
           log('MM NOT found');
           iMM--;
           DD = 31;
-
 
         }
         else
         {
           log('MM found');
 
-
           var iDD = DD;
           while (iDD >= 1)
           {
-            if (!Obj[iYY][iMM][iDD])
+            if (Obj[iYY][iMM][iDD] === undefined)
             {
               log('DD NOT found');
               iDD--;
@@ -79,7 +77,7 @@ var value = function(utc)
               var iHH = HH;
               while (iHH >= 0)
               {
-                if (!Obj[iYY][iMM][iDD][iHH])
+                if (Obj[iYY][iMM][iDD][iHH] === undefined)
                 {
                   log('HH NOT found');
                   iHH--;
@@ -93,12 +91,11 @@ var value = function(utc)
                   var imm = mm;
                   while (imm >= 0)
                   {
-                    if (!Obj[iYY][iMM][iDD][iHH][imm])
+                    if (Obj[iYY][iMM][iDD][iHH][imm] === undefined)
                     {
                       log('mm NOT found');
                       imm--;
                       ss = 59;
-
 
                     }
                     else
@@ -108,7 +105,7 @@ var value = function(utc)
                       var iss = ss;
                       while (iss >= 0)
                       {
-                        if (!Obj[iYY][iMM][iDD][iHH][imm][iss])
+                        if (Obj[iYY][iMM][iDD][iHH][imm][iss] === undefined)
                         {
                           log('ss NOT found');
                           iss--;
@@ -134,7 +131,6 @@ var value = function(utc)
                               log('msc found');
 
                               return Obj[iYY][iMM][iDD][iHH][imm][iss][imsc];
-
 
                             }
                           }

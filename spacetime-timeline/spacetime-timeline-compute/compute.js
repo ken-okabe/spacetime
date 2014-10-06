@@ -39,32 +39,32 @@ var compute = function(f)
     log(ss);
     log(msc);
 
-    if (!preObj[YY])
+    if (preObj[YY] === undefined)
     {
       preObj[YY] = {};
     }
 
-    if (!preObj[YY][MM])
+    if (preObj[YY][MM] === undefined)
     {
       preObj[YY][MM] = {};
     }
 
-    if (!preObj[YY][MM][DD])
+    if (preObj[YY][MM][DD] === undefined)
     {
       preObj[YY][MM][DD] = {};
     }
 
-    if (!preObj[YY][MM][DD][HH])
+    if (preObj[YY][MM][DD][HH] === undefined)
     {
       preObj[YY][MM][DD][HH] = {};
     }
 
-    if (!preObj[YY][MM][DD][HH][mm])
+    if (preObj[YY][MM][DD][HH][mm] === undefined)
     {
       preObj[YY][MM][DD][HH][mm] = {};
     }
 
-    if (!preObj[YY][MM][DD][HH][mm][ss])
+    if (preObj[YY][MM][DD][HH][mm][ss] === undefined)
     {
       preObj[YY][MM][DD][HH][mm][ss] = {};
     }
