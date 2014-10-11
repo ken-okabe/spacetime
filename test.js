@@ -29,6 +29,24 @@ _e.take(5).compute(function(x)
 {
   clog(x);
 });
+
+
+
+
+
+var natural = _(function(n)
+{
+  return n;
+});
+
+var natural10 = _(natural)
+  .take(10)
+  .compute(function(x)
+  {
+    clog(x);
+  });
+
+
 //wrap a recursive function to memoize
 // must be at the definition in the same scope
 var fib = _(function(n)
@@ -47,19 +65,7 @@ var fib10 = _(fib)
     clog(x);
   });
 
-var natural = _(function(n)
-{
-  return n;
-});
 
-
-
-var natural10 = _(natural)
-  .take(10)
-  .compute(function(x)
-  {
-    clog(x);
-  });
 
 log('---------------------------');
 var naturalreduce = _(natural)
