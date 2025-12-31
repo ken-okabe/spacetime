@@ -1,0 +1,13 @@
+{
+  "title": "Zenodo Integration Test Project",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "This is a test repository to verify the GitHub-Zenodo integration flow and DOI issuance for a preprint.",
+  "creators": [
+    {
+      "name": "Okabe, Ken"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT"
+}
