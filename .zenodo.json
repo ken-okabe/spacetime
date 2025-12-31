@@ -1,8 +1,8 @@
 {
-  "title": "Zenodo Integration Test Project",
+  "title": "H84-E8-TQC Theory",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "This is a test repository to verify the GitHub-Zenodo integration flow and DOI issuance for a preprint.",
+  "description": "8-Bit H(8,4) Code and E8 Lattice Theory: BQP-Complete Topological Quantum Computing via Bitwise Arithmetic, Geometric Unification of Standard Model Constants, and Emergent Λ>0 de Sitter Spacetime",
   "creators": [
     {
       "name": "Okabe, Ken"
