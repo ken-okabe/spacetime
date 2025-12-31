@@ -6,6 +6,8 @@
 > **Initiated:** 2025
 > **License:** CC-BY 4.0
 
+[![DOI](https://zenodo.org/badge/21312134.svg)](https://doi.org/10.5281/zenodo.18108546)
+
 
 ---
 © 2025 Ken Okabe. This is a living document hosted on GitHub.
