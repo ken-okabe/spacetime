@@ -1,5 +1,7 @@
 # H84-E8-TQC Theory
 
+## 8-Bit H(8,4) Code and E8 Lattice Theory: BQP-Complete Topological Quantum Computing via Bitwise Arithmetic, Geometric Unification of Standard Model Constants, and Emergent Λ>0 de Sitter Spacetime
+
 > **Project Status:** Public Alpha (v0.1)
 > **Initiated:** 2025
 > **License:** CC-BY 4.0
