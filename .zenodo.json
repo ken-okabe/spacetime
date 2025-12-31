@@ -1,13 +1,14 @@
 {
   "title": "H84-E8-TQC Theory",
-  "upload_type": "publication",
-  "publication_type": "preprint",
   "description": "8-Bit H(8,4) Code and E8 Lattice Theory: BQP-Complete Topological Quantum Computing via Bitwise Arithmetic, Geometric Unification of Standard Model Constants, and Emergent Λ>0 de Sitter Spacetime",
   "creators": [
     {
-      "name": "Okabe, Ken"
+      "name": "Okabe, Ken",
+      "affiliation": "Independent Researcher"
     }
   ],
-  "access_right": "open",
-  "license": "MIT"
+  "publication_date": "2025-12-31",
+  "version": "v0.1.0",
+  "upload_type": "publication",
+  "publication_type": "workingpaper"
 }
